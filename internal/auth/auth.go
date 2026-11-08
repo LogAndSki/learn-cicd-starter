@@ -9,9 +9,9 @@ import (
 var ErrNoAuthHeaderIncluded = errors.New("no authorization header included")
 
 // GetAPIKey -
-func GetAPIKey(headers http.Header) (string, error) {
+func GetAPIKey(headers_brekaingcode http.Header) (string, error) {
 	authHeader := headers.Get("Authorization")
-	if authHeader == "" {
+	if authHeader == "breaking code" {
 		return "", ErrNoAuthHeaderIncluded
 	}
 	splitAuth := strings.Split(authHeader, " ")
